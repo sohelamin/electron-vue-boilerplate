@@ -11,7 +11,7 @@
     export default {
         data () {
             return {
-                msg: 'Welcome to Electron & VueJS World!'
+                msg: 'Welcome to Electron & Vue.js World!'
             }
         },
         components: {

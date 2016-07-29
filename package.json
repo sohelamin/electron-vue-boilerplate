@@ -11,13 +11,12 @@
     "build": "NODE_ENV=production webpack --progress --profile --colors",
     "start": "NODE_ENV=production electron ./",
     "package": "npm run build; npm run package-osx; npm run package-win; npm run package-linux;",
-    "package-osx": "electron-packager ./ --platform=darwin --arch=x64 --icon=./assets/app.ico --out=./package --asar=true --overwrite=force",
-    "package-win": "electron-packager ./ --platform=win32 --arch=ia32 --icon=./assets/app.ico --out=./package --asar=true --overwrite=force",
-    "package-linux": "electron-packager ./ --platform=linux --arch=ia32 --icon=./assets/app.ico --out=./package --asar=true --overwrite=force"
+    "package-osx": "electron-packager ./ --platform=darwin --arch=x64 --icon=assets/app.icns --out=package --asar=true --overwrite=force",
+    "package-win": "electron-packager ./ --platform=win32 --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force",
+    "package-linux": "electron-packager ./ --platform=linux --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force"
   },
   "dependencies": {
     "electron-prebuilt": "^1.2.2",
-    "express": "^4.13.4",
     "vue": "^1.0.24",
     "vue-router": "^0.7.13"
   },
