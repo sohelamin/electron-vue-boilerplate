@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Electron &amp; Vue.js</title>
+        <link rel="stylesheet" href="assets/css/photon.css">
+        <style type="text/css">
+            a {
+                text-decoration: none;
+                color: #4285f4;
+            }
+            .nav-group-item .icon {
+                color: wheat;
+            }
+            .nav-group-item:active, .nav-group-item.active {
+                background-color: #4285f4;
+            }
+            .sidebar a {
+                color: wheat;
+            }
+            .sidebar {
+                background: #334;
+                width: 23%;
+            }
+            .container {
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body id="app">
+        <div class="window">
+            <div class="window-content">
+                <div class="pane-group">
+                    <div class="pane-sm sidebar">
+                        <nav class="nav-group">
+                            <h5 class="nav-group-title">Favorites</h5>
+                            <a class="nav-group-item" v-link="{ path: '/', exact: true, activeClass: 'active' }"><span class="icon icon-home"></span>
+                                Home</a>
+                            <a class="nav-group-item" v-link="{ path: '/contacts', exact: true, activeClass: 'active' }"><span class="icon icon-users"></span>
+                                Contacts</a>
+                            <a class="nav-group-item" v-link="{ path: '/music', exact: true, activeClass: 'active' }"><span class="icon icon-note-beamed"></span>
+                                Play</a>
+                        </nav>
+                    </div>
+                    <div class="pane container" style="padding: 10px;">
+                        <router-view></router-view>
+                    </div>
+                </div>
+            </div>
+            <footer class="toolbar toolbar-footer">
+                <h1 class="title">Made by <a href="http://www.sohelamin.com" target="_blank">Sohel Amin</a></h1>
+            </footer>
+        </div>
+        <script src="dist/build.js"></script>
+    </body>
+</html>
