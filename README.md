@@ -22,7 +22,7 @@ npm run package-osx
 ```
 
 ## Screenshot
-![screenshot](https://cloud.githubusercontent.com/assets/1708683/17278113/7097d7c4-5776-11e6-9579-49d7c8368d73.png)
+![screenshot](https://cloud.githubusercontent.com/assets/1708683/17278142/0fac0790-5777-11e6-9659-d5b40f12e7cf.png)
 
 
 ##Author
