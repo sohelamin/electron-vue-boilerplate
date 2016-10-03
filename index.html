@@ -27,29 +27,28 @@
             }
         </style>
     </head>
-    <body id="app">
-        <div class="window">
-            <div class="window-content">
-                <div class="pane-group">
-                    <div class="pane-sm sidebar">
-                        <nav class="nav-group">
-                            <h5 class="nav-group-title">Favorites</h5>
-                            <a class="nav-group-item" v-link="{ path: '/', exact: true, activeClass: 'active' }"><span class="icon icon-home"></span>
-                                Home</a>
-                            <a class="nav-group-item" v-link="{ path: '/contacts', exact: true, activeClass: 'active' }"><span class="icon icon-users"></span>
-                                Contacts</a>
-                            <a class="nav-group-item" v-link="{ path: '/music', exact: true, activeClass: 'active' }"><span class="icon icon-note-beamed"></span>
-                                Play</a>
-                        </nav>
-                    </div>
-                    <div class="pane container" style="padding: 10px;">
-                        <router-view></router-view>
+    <body>
+        <div id="app">
+            <div class="window">
+                <div class="window-content">
+                    <div class="pane-group">
+                        <div class="pane-sm sidebar">
+                            <nav class="nav-group">
+                                <h5 class="nav-group-title">Favorites</h5>
+                                <router-link class="nav-group-item" to="/"><span class="icon icon-home"></span> Home</router-link>
+                                <router-link class="nav-group-item" to="/contacts"><span class="icon icon-users"></span> Contacts</router-link>
+                                <router-link class="nav-group-item" to="/music"><span class="icon icon-note-beamed"></span> Play</router-link>
+                            </nav>
+                        </div>
+                        <div class="pane container" style="padding: 10px;">
+                            <router-view></router-view>
+                        </div>
                     </div>
                 </div>
+                <footer class="toolbar toolbar-footer">
+                    <h1 class="title">Made by <a href="http://www.sohelamin.com" target="_blank">Sohel Amin</a></h1>
+                </footer>
             </div>
-            <footer class="toolbar toolbar-footer">
-                <h1 class="title">Made by <a href="http://www.sohelamin.com" target="_blank">Sohel Amin</a></h1>
-            </footer>
         </div>
         <script src="dist/build.js"></script>
     </body>

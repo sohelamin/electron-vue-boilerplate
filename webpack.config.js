@@ -1,13 +1,19 @@
+var path = require('path')
 var webpack = require('webpack')
-const path = require('path');
 
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: './dist',
-        publicPath: 'dist/',
+        path: path.resolve(__dirname, './dist'),
+        publicPath: '/dist/',
         filename: 'build.js'
     },
+    resolve: {
+        alias: {vue: 'vue/dist/vue.js'},
+        root: path.join(__dirname, '..'),
+        extensions: ['', '.js', '.json', '.vue']
+    },
+    target: 'electron',
     module: {
         loaders: [
             {
@@ -15,39 +21,38 @@ module.exports = {
                 loader: 'vue'
             },
             {
-                // edit this for additional asset file types
-                test: /\.(png|jpg|gif)$/,
-                loader: 'file?name=[name].[ext]?[hash]'
+                test: /\.js$/,
+                loader: 'babel',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file',
+                query: {
+                    name: '[name].[ext]?[hash]'
+                }
             }
         ]
     },
-    // example: if you wish to apply custom babel options
-    // instead of using vue-loader's default:
-    babel: {
-        presets: ['es2015', 'stage-0'],
-        plugins: ['transform-runtime']
+    devServer: {
+        historyApiFallback: true,
+        noInfo: true
     },
-    resolve: {
-        root: path.join(__dirname, '..'),
-        extensions: ['', '.js', '.json', '.vue']
-    },
-    target: 'electron'
+    devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
-    module.exports.plugins = [
+    module.exports.devtool = '#source-map'
+    module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: '"production"'
         }
     }),
     new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }),
-    new webpack.optimize.OccurenceOrderPlugin()
-    ]
-} else {
-    module.exports.devtool = '#source-map'
+            compress: {
+                warnings: false
+            }
+        })
+    ])
 }

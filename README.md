@@ -1,5 +1,11 @@
 # A boilerplate app using Electron & Vue.js
 
+### Requirements
+    Electron >= 1.0.0
+    Vue >=2.0.1
+    Vue Router >=2.0.0
+    Webpack >=2.1.0-beta
+
 ## Usage
 
 ```bash
@@ -11,7 +17,7 @@ cd electron-vue-boilerplate && npm install
 
 ```bash
 npm run dev-server
-npm run dev
+npm run dev // on a different tab
 ```
 
 ## Build

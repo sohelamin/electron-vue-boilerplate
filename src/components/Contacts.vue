@@ -82,7 +82,8 @@
                 this.phone = contact.phone;
             },
             removeContact (contact) {
-                this.contacts.$remove(contact);
+                var index = this.contacts.indexOf(contact);
+                this.contacts.splice(index, 1);
             },
             updateContact (id) {
                 this.contacts[id].name = this.name;
