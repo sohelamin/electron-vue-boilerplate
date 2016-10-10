@@ -9,11 +9,11 @@ module.exports = {
         filename: 'build.js'
     },
     resolve: {
-        alias: {vue: 'vue/dist/vue.js'},
-        root: path.join(__dirname, '..'),
-        extensions: ['', '.js', '.json', '.vue']
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
     },
-    target: 'electron',
+    target: 'electron-renderer',
     module: {
         loaders: [
             {
@@ -33,26 +33,22 @@ module.exports = {
                 }
             }
         ]
-    },
-    devServer: {
-        historyApiFallback: true,
-        noInfo: true
-    },
-    devtool: '#eval-source-map'
+    }
 }
 
 if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
-    module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-        'process.env': {
-            NODE_ENV: '"production"'
-        }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
+    module.exports.plugins = [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             }
         })
-    ])
+    ]
+} else {
+    module.exports.devtool = '#source-map'
 }

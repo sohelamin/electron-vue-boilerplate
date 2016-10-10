@@ -1,36 +1,36 @@
 {
-  "name": "electron-vue-boilerplate",
-  "version": "1.0.0",
-  "description": "Electron & Vue.js Boilerplate App",
-  "author": "Sohel Amin",
-  "license": "MIT",
-  "main": "main.js",
-  "scripts": {
-    "dev-server": "NODE_ENV=development webpack-dev-server --inline --hot --quiet --port 3000",
-    "dev": "NODE_ENV=development electron ./",
-    "build": "NODE_ENV=production webpack --progress --profile --colors",
-    "start": "NODE_ENV=production electron ./",
-    "package": "npm run build; npm run package-osx; npm run package-win; npm run package-linux;",
-    "package-osx": "electron-packager ./ --platform=darwin --arch=x64 --icon=assets/app.icns --out=package --asar=true --overwrite=force",
-    "package-win": "electron-packager ./ --platform=win32 --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force",
-    "package-linux": "electron-packager ./ --platform=linux --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force"
-  },
-  "dependencies": {
-    "electron-prebuilt": "^1.4.2",
-    "vue": "^2.0.1",
-    "vue-router": "^2.0.0"
-  },
-  "devDependencies": {
-    "electron-packager": "^8.1.0",
-    "electron-reload": "^1.0.2",
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-es2015": "^6.0.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "vue-loader": "^9.4.0",
-    "webpack": "2.1.0-beta.22",
-    "webpack-dev-server": "^2.1.0-beta.0"
-  }
+    "name": "electron-vue-boilerplate",
+    "version": "1.0.0",
+    "description": "Electron & Vue.js Boilerplate App",
+    "author": "Sohel Amin",
+    "license": "MIT",
+    "main": "main.js",
+    "scripts": {
+        "dev-server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --quiet --port 3000",
+        "dev": "cross-env NODE_ENV=development electron ./",
+        "build": "cross-env NODE_ENV=production webpack --progress --profile --colors",
+        "start": "cross-env NODE_ENV=production electron ./",
+        "package": "npm run build; npm run package-osx; npm run package-win; npm run package-linux;",
+        "package-osx": "electron-packager ./ --platform=darwin --arch=x64 --icon=assets/app.icns --out=package --asar=true --overwrite=force",
+        "package-win": "electron-packager ./ --platform=win32 --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force",
+        "package-linux": "electron-packager ./ --platform=linux --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force"
+    },
+    "dependencies": {
+        "electron": "^1.4.3",
+        "vue": "^2.0.1",
+        "vue-router": "^2.0.0"
+    },
+    "devDependencies": {
+        "electron-packager": "^8.1.0",
+        "electron-reload": "^1.0.2",
+        "babel-core": "^6.16.0",
+        "babel-loader": "^6.2.5",
+        "babel-preset-es2015": "^6.16.0",
+        "cross-env": "^3.1.1",
+        "css-loader": "^0.25.0",
+        "file-loader": "^0.9.0",
+        "vue-loader": "^9.5.1",
+        "webpack": "2.1.0-beta.22",
+        "webpack-dev-server": "^2.1.0-beta.0"
+    }
 }
