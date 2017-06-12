@@ -1,10 +1,10 @@
 # A boilerplate app using Electron & Vue.js
 
 ### Requirements
-    Electron >= 1.0.0
-    Vue >=2.0.1
-    Vue Router >=2.0.0
-    Webpack >=2.1.0-beta
+    Electron
+    Vue
+    Vue Router
+    Webpack
 
 ## Usage
 
@@ -31,5 +31,5 @@ npm run package-osx
 ![screenshot](https://cloud.githubusercontent.com/assets/1708683/17278142/0fac0790-5777-11e6-9659-d5b40f12e7cf.png)
 
 
-##Author
+## Author
 [Sohel Amin](http://www.sohelamin.com)
