@@ -8,14 +8,14 @@ Vue.use(VueRouter)
 import Contacts from './components/Contacts.vue'
 import Music from './components/Music.vue'
 
-var router = new VueRouter({
-    routes: [
-        { path: '/', component: App },
-        { path: '/contacts', component: Contacts },
-        { path: '/music', component: Music }
-    ]
+const router = new VueRouter({
+  routes: [
+    { path: '/', component: App },
+    { path: '/contacts', component: Contacts },
+    { path: '/music', component: Music }
+  ]
 })
 
 const app = new Vue({
-    router
+  router
 }).$mount('#app')

@@ -1,38 +1,38 @@
 {
-    "name": "electron-vue-boilerplate",
-    "version": "1.0.0",
-    "description": "Electron & Vue.js Boilerplate App",
-    "author": "Sohel Amin",
-    "license": "MIT",
-    "main": "main.js",
-    "scripts": {
-        "dev-server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --quiet --port 3000",
-        "dev": "cross-env NODE_ENV=development electron ./",
-        "build": "cross-env NODE_ENV=production webpack --progress --profile --colors",
-        "start": "cross-env NODE_ENV=production electron ./",
-        "package": "npm run build; npm run package-osx; npm run package-win; npm run package-linux;",
-        "package-osx": "electron-packager ./ --platform=darwin --arch=x64 --icon=assets/app.icns --out=package --asar=true --overwrite=force",
-        "package-win": "electron-packager ./ --platform=win32 --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force",
-        "package-linux": "electron-packager ./ --platform=linux --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force"
-    },
-    "dependencies": {
-        "electron": "^1.8.2",
-        "vue": "^2.5.13",
-        "vue-router": "^3.0.1"
-    },
-    "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.3",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-stage-3": "^6.24.1",
-        "cross-env": "^5.1.3",
-        "css-loader": "^0.28.10",
-        "electron-packager": "^11.0.1",
-        "electron-reload": "^1.2.2",
-        "file-loader": "^1.1.9",
-        "vue-loader": "^14.1.1",
-        "vue-template-compiler": "^2.5.13",
-        "webpack": "^3.6.0",
-        "webpack-dev-server": "^2.9.1"
-    }
+  "name": "electron-vue-boilerplate",
+  "version": "1.0.0",
+  "description": "Electron & Vue.js Boilerplate App",
+  "author": "Sohel Amin",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "dev-server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --quiet --port 3000",
+    "dev": "cross-env NODE_ENV=development electron ./",
+    "build": "cross-env NODE_ENV=production webpack --progress --profile --colors",
+    "start": "cross-env NODE_ENV=production electron ./",
+    "package": "npm run build; npm run package-osx; npm run package-win; npm run package-linux;",
+    "package-osx": "electron-packager ./ --platform=darwin --arch=x64 --icon=assets/app.icns --out=package --asar=true --overwrite=force",
+    "package-win": "electron-packager ./ --platform=win32 --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force",
+    "package-linux": "electron-packager ./ --platform=linux --arch=ia32 --icon=assets/app.ico --out=package --asar=true --overwrite=force"
+  },
+  "dependencies": {
+    "electron": "^1.8.2",
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.10",
+    "electron-packager": "^11.0.1",
+    "electron-reload": "^1.2.2",
+    "file-loader": "^1.1.9",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
 }
