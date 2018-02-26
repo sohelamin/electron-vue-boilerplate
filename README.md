@@ -11,8 +11,6 @@ $ npm run dev-server
 $ npm run dev // on a different tab
 ```
 
-```
-
 ## Screenshot
 ![screenshot](https://cloud.githubusercontent.com/assets/1708683/17278142/0fac0790-5777-11e6-9659-d5b40f12e7cf.png)
 
