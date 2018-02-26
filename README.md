@@ -1,4 +1,5 @@
-# A boilerplate app using Electron & Vue.js
+# Electron & Vue.js vue-cli template
+> Electron & Vue.js template for vue-cli based on the webpack template
 
 ### Usage
 
@@ -8,7 +9,16 @@ $ vue init sohelamin/electron-vue-boilerplate my-project
 $ cd my-project
 $ npm install
 $ npm run dev-server
-$ npm run dev // on a different tab
+# run on a different tab
+$ npm run dev
+```
+
+### Build
+
+```bash
+$ npm run build
+# define your os package-<your-os-code>
+$ npm run package-osx
 ```
 
 ## Screenshot
