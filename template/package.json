@@ -1,9 +1,9 @@
 {
-  "name": "electron-vue-boilerplate",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "Electron & Vue.js Boilerplate App",
-  "author": "Sohel Amin",
-  "license": "MIT",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "license": "{{ license }}",
   "main": "main.js",
   "scripts": {
     "dev-server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --quiet --port 3000",
