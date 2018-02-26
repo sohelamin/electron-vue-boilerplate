@@ -5,7 +5,9 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
 if (process.env.NODE_ENV === 'development') {
-    require('electron-reload')(__dirname)
+    require('electron-reload')(__dirname, {
+      electron: require(`${__dirname}/node_modules/electron`)
+    });
 }
 
 let mainWindow
