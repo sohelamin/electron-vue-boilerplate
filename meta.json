@@ -13,7 +13,8 @@
     },
     "author": {
       "type": "string",
-      "label": "Author"
+      "label": "Author",
+      "default": "Sohel Amin"
     },
     "license": {
       "type": "string",
