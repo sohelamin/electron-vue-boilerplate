@@ -15,7 +15,7 @@ module.exports = {
   },
   target: 'electron-renderer',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -41,11 +41,6 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
       }
     })
   ]
