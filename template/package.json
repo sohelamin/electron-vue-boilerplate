@@ -4,6 +4,7 @@
   "description": "{{ description }}",
   "author": "{{ author }}",
   "license": "{{ license }}",
+  "private": true,
   "main": "main.js",
   "scripts": {
     "dev-server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --quiet --port 3000",
