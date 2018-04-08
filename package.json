@@ -1,9 +1,9 @@
 {
-  "name": "{{ name }}",
+  "name": "electron-vue-boilerplate",
   "version": "1.0.0",
-  "description": "{{ description }}",
-  "author": "{{ author }}",
-  "license": "{{ license }}",
+  "description": "A boilerplate app using Electron & Vue.js",
+  "author": "Sohel Amin",
+  "license": "MIT",
   "private": true,
   "main": "main.js",
   "scripts": {

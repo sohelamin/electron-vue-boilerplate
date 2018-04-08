@@ -1,12 +1,11 @@
-# Electron & Vue.js vue-cli template
-> Electron & Vue.js template for vue-cli based on the webpack template
+# Electron & Vue.js
+> A boilerplate app using Electron & Vue.js
 
 ### Usage
 
 ```bash
-$ npm install -g vue-cli
-$ vue init sohelamin/electron-vue-boilerplate my-project
-$ cd my-project
+$ git clone https://github.com/sohelamin/electron-vue-boilerplate.git
+$ cd electron-vue-boilerplate
 $ npm install
 $ npm run dev-server
 # run on a different tab
